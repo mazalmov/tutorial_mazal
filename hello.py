@@ -3,10 +3,11 @@ import random
 def guess_the_number():
     number_to_guess = random.randint(1, 100)
     attempts = 0
+    max_attempts = 5
     print("Welcome to the 'Guess the Number' game!")
     print("I am thinking of a number between 1 and 100.")
     
-    while True:
+    while attempts < max_attempts:
         try:
             guess = int(input("Try to guess the number: "))
             attempts += 1
